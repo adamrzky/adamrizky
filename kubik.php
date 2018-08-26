@@ -8,17 +8,17 @@ require_once("sdata-modules.php");
  * @Last Modified time: 2018-08-17 15:13:34
 */
 ##############################################################################################################
-$config['deviceCode'] 		= '3551230xxxxxxx';
-$config['tk'] 				= 'ACGmNhoexxxxxx';
-$config['token'] 			= '35a7oDTxxxxxxx';
-$config['uuid'] 			= 'abdacad4xxxxxx4';
-$config['sign'] 			= '12988158bxxxxxx';
-$config['android_id'] 		= 'a28a65fbbxxxxxx';
+$config['deviceCode'] 		= '866709036100153..';
+$config['tk'] 				= 'ACGbGoeHXYhMeLUqft0EDp2BMuhnGDoW8ntxdHRodw';
+$config['token'] 			= '7267_DKCS7M0Vog-sJlClUdIaF9lrPUz6s8TKrooHc5sJoe6xnXMKyw_QDiw0sFZlHycLIR2yvFYyQ';
+$config['uuid'] 			= '9729997f6072463a99f10582cded8c97';
+$config['sign'] 			= '9e9026e3b959162bde47bd5eb726cfc1';
+$config['android_id'] 		= '4f7ce7a69e955e1e';
 ##############################################################################################################
 for ($x=0; $x <1; $x++) { 
 	$url 	= array(); 
-	for ($cid=0; $cid <20; $cid++) { 
-		for ($page=0; $page <10; $page++) { 
+	for ($cid=0; $cid <30; $cid++) { 
+		for ($page=0; $page <20; $page++) { 
 			$url[] = array(
 				'url' 	=> 'http://api.beritaqu.net/content/getList?cid='.$cid.'&page='.$page,
 				'note' 	=> 'optional', 
@@ -35,7 +35,7 @@ for ($x=0; $x <1; $x++) {
 		echo "[+] Mengambil data artikel (CID : ".$cid.") ==> ".count(array_unique($artikel))."\r\n";
 	}
 	while (TRUE) {
-		$timeIn60Minutes = time() + 60*60;
+		$timeIn60Minutes = time() + 60*120;
 		$rnd 	= array_rand($artikel); 
 		$id 	= $artikel[$rnd];
 		$url[] = array(
@@ -54,11 +54,11 @@ for ($x=0; $x <1; $x++) {
 				unset($artikel[$value[data][note]]);
 			}
 		}
-		if(count($artikel) == 0){
-			sleep(60);
+		if(count($artikel) == 2){
+			sleep(120);
 			break;
 		}
-		sleep(5);
+		sleep(60);
 	}
 	$x++;
 }
