@@ -10,9 +10,9 @@ require_once("sdata-modules.php");
 ##############################################################################################################
 $config['deviceCode'] 		= '866709036100153..';
 $config['tk'] 				= 'ACGbGoeHXYhMeLUqft0EDp2BMuhnGDoW8ntxdHRodw';
-$config['token'] 			= '7267_DKCS7M0Vog-sJlClUdIaF9lrPUz6s8TKrooHc5sJoe6xnXMKyw_QDiw0sFZlHycLIR2yvFYyQ';
-$config['uuid'] 			= '9729997f6072463a99f10582cded8c97';
-$config['sign'] 			= '9e9026e3b959162bde47bd5eb726cfc1';
+$config['token'] 			= 'd941hNTEJ4Nmn5yg2xbmquw8TD_XFOA623Gjsy4lrNvzD1NrNrVloCufOjuNdjsnb5Nfe26r1GtJew';
+$config['uuid'] 			= 'f68c06868c9e40b4b33aa6c9a3a97348';
+$config['sign'] 			= '00276299528c047314cf0d904ce69208';
 $config['android_id'] 		= '4f7ce7a69e955e1e';
 ##############################################################################################################
 for ($x=0; $x <1; $x++) { 
@@ -58,7 +58,6 @@ for ($x=0; $x <1; $x++) {
 			sleep(60);
 			break;
 		}
-		sleep(5);
+		sleep(10);
 	}
 	$x++;
-}
